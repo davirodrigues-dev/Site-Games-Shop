@@ -6,8 +6,19 @@
 
 body {
     font-family: "Roboto", sans-serif;
-    background-color: #ecf0ec;
     background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+}
+
+@keyframes revelar {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 header, section h2 {
@@ -19,6 +30,11 @@ header .cabecalho {
     background-color: #182C61;
     color: #ecf0ec;
     margin-bottom: 32px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.324);
+}
+
+header .cabecalho {
+    animation: revelar 0.5s ease-out;
 }
 
 header nav ul {
@@ -51,6 +67,13 @@ section .sobreLoja{
 
 section .sobreLoja p {
     margin-bottom: 16px;
+    font-size: 18px;
+    gap: 16px;
+}
+
+section .sobreLoja h2 {
+    margin-bottom: 32px;
+    font-size: 32px;
 }
 
 footer .rodape {
@@ -96,11 +119,13 @@ section .socialMedia {
 
 .formSocialMedia {
     width: 50%;
+    margin-top: 60px;
 }
 
 .formSocialMedia form {
     display: flex;
     flex-direction: column;
+    margin-top: 32px;
 }
 
 .formSocialMedia label {
@@ -118,7 +143,7 @@ section .socialMedia {
 
 .formSocialMedia button {
     padding: 10px;
-    background-color: #182C61;
+    background-color: #4775f5;
     color: #ecf0ec;
     border: none;
     border-radius: 4px;
@@ -132,32 +157,41 @@ section .socialMedia {
 
 .redesSociaisMedia {
     width: 50%;
+    margin-top: 60px;
+    margin-left: 75px;
 }
 
 .redesSociaisMedia a {
     display: block;
     margin-bottom: 8px;
-    color: #182C61;
+    color: #537df0;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
+    margin-top: 16px;
 }
 
 .redesSociaisMedia a:hover {
     color: #0f1c42;
 }
 
-.contatoMedia h3 {
-    margin-bottom: 16px;
+.contatoMedia {
+    width: 50%;
+    margin-top: 60px;
 }
 
-.contatoMedia a,
-.contatoMedia p {
+.contatoMedia a{
+    display: block;
     margin-bottom: 8px;
-    color: #182C61;
+    color: #537df0;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
+    margin-top: 16px;
+}
+
+.contatoMedia h3 {
+    margin-bottom: 16px;
 }
 
 .contatoMedia a:hover,
@@ -165,7 +199,57 @@ section .socialMedia {
     color: #0f1c42;
 }
 
-.contatoMedia, .redesSociaisMedia, .formSocialMedia {
-    margin-top: 60px;
-    margin-left: 35px;
+footer {
+    background-color: #182C61;
+    color: #ecf0ec;
+    margin-top: 280px;
+}
+
+.cabecalho li a:hover {
+    color: #7791e1;
+}
+
+footer p {
+    display: flex;
+    margin-top: 32px;
+    font-size: 14px;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    body {
+        max-width: 100%;
+        height: auto;
+        overflow-x: hidden;
+    }
+
+    header .cabecalho,
+    section .sobreLoja {
+        gap: 16px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagemLoja {
+        width: 100%;
+        height: auto;
+        margin: 16px 0;
+    }
+
+    .socialMedia {
+        flex-direction: column;
+        align-items: center;
+        padding: 12px;
+        width: 100%;
+    }
+
+    .formSocialMedia,
+    .redesSociaisMedia,
+    .contatoMedia {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 12px auto;
+        width: 100%;
+    }
 }
