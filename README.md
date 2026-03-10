@@ -2,7 +2,7 @@
 
 > **⚠️ Atenção:** Este projeto está em desenvolvimento. Novas funcionalidades serão adicionadas em breve.
 
-Desenvolvi o projeto "Game Shop" como um exercício prático para aprofundar meus conhecimenos em HTML semântico e CSS moderno, especialmento Flexbox e responsividade para ficar mais conforável para o usuário.
+Desenvolvi o projeto "Game Shop" como um exercício prático para aprofundar meus conhecimenos em HTML semântico e CSS moderno, especialmento Flexbox e responsividade para ficar mais confortável para o usuário.
 
 ## ✨ Funcionalidades Atuais
 
