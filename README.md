@@ -6,8 +6,7 @@ Desenvolvi o projeto "Game Shop" como um exercício prático para aprofundar meu
 
 ## 🖼️ Visualização
 
-<!-- Adicione aqui um screenshot ou GIF do projeto! Ex: -->
-<!-- ![Game Shop Screenshot](https://user-images.githubusercontent.com/example.png) -->
+![Game Shop Gif](/imagem/game-shop.gif)
 
 ## ✨ Funcionalidades
 
