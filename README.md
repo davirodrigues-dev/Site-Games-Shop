@@ -2,9 +2,14 @@
 
 > **⚠️ Atenção:** Este projeto está em desenvolvimento. Novas funcionalidades serão adicionadas em breve.
 
-Desenvolvi o projeto "Game Shop" como um exercício prático para aprofundar meus conhecimenos em HTML semântico e CSS moderno, especialmento Flexbox e responsividade para ficar mais confortável para o usuário.
+Desenvolvi o projeto "Game Shop" como um exercício prático para aprofundar meus conhecimentos em HTML semântico e CSS moderno, especialmente Flexbox e responsividade, para tornar a experiência do usuário mais confortável.
 
-## ✨ Funcionalidades Atuais
+## 🖼️ Visualização
+
+<!-- Adicione aqui um screenshot ou GIF do projeto! Ex: -->
+<!-- ![Game Shop Screenshot](https://user-images.githubusercontent.com/example.png) -->
+
+## ✨ Funcionalidades
 
 - **Cabeçalho Fixo:** O menu de navegação permanece no topo da tela durante o scroll, facilitando o acesso a outras seções.
 - **Design Responsivo:** O layout se adapta a diferentes tamanhos de tela, garantindo uma boa visualização em celulares e tablets.
@@ -12,6 +17,12 @@ Desenvolvi o projeto "Game Shop" como um exercício prático para aprofundar meu
   - **Página Inicial:** Com seções "Sobre a loja" e "Contato".
   - **Página de Produtos:** Estrutura inicial para o catálogo de jogos.
 - **Formulário de Contato:** Estrutura básica para envio de mensagens.
+
+## 🌐 Demo Online
+
+Você pode visualizar o projeto em funcionamento através deste link:
+
+**[Acessar a Game Shop](https://davirodrigues-dev.github.io/Site-Games-Shop/)**
 
 ## 🚧 Próximos Passos
 
