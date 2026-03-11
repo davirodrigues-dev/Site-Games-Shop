@@ -5,11 +5,15 @@
     scroll-behavior: smooth;
 }
 
+html {
+    scroll-padding-top: 130px;
+}
+
 body {
     font-family: "Roboto", sans-serif;
     background-color: rgb(255, 255, 255);
     overflow-x: hidden;
-    padding-top: 148px;
+    padding-top: 130px;
 }
 
 header {
@@ -20,14 +24,12 @@ header {
     z-index: 1;
 }
 
-@keyframes revelar {
+@keyframes fadein {
     from {
         opacity: 0;
-        transform: translateY(20px);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
     }
 }
 
@@ -36,7 +38,7 @@ header, section h2 {
 }
 
 header .cabecalho {
-    padding: 42px;
+    padding: 45px;
     background-color: #182C61;
     color: #ecf0ec;
     margin-bottom: 32px;
@@ -44,7 +46,7 @@ header .cabecalho {
 }
 
 header .cabecalho {
-    animation: revelar 0.5s ease-out;
+    animation: fadein 0.5s ease-out;
 }
 
 header nav ul {
@@ -63,7 +65,7 @@ header nav li a {
 }
 
 #sobreLoja {
-    max-width:  1280px;
+    max-width: 1280px;
     width: 100%;
     margin: 0 auto;
 }
@@ -76,9 +78,8 @@ section #sobreLoja{
 }
 
 section #sobreLoja p {
-    margin-bottom: 16px;
-    font-size: 18px;
-    gap: 16px;
+    margin-bottom: 20px;
+    font-size: 20px;
 }
 
 section #sobreLoja h2 {
@@ -114,6 +115,42 @@ section .socialMedia {
     height: 380px;
     margin-right: 16px;
     margin-left: 0;
+    margin-top: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.324);
+}
+
+#inicio {
+    position: relative;
+}
+
+#inicio::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to bottom, rgba(180, 180, 180, 0), rgb(255, 255, 255));
+}
+
+.titulo-inicio{
+    position: absolute;
+    left: 20px;
+    font-family: 'Roboto', sans-serif;
+    bottom: 200px;
+    font-size: 23px;
+    color: #ecf0ec;
+    text-align: center;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.521);
+}
+
+.img-consoles{
+    object-fit: cover;
+    width: 100%;
+    height: 520px;
+    position: relative;
+    margin-bottom: 12px;
 }
 
 .socialMedia {
@@ -221,12 +258,16 @@ footer {
 
 footer p {
     display: flex;
-    margin-top: 32px;
+    margin-top: 20px;
     font-size: 14px;
     justify-content: center;
 }
 
 @media (max-width: 768px) {
+    html {
+        scroll-padding-top: 200px;
+    }
+
     body {
         max-width: 100%;
         height: auto;
