@@ -64,6 +64,15 @@ header nav li a {
     text-decoration: none;
 }
 
+.cabecalho nav ul li a {
+    display: inline-block;
+    transform: transform 0.3 ease;
+}
+
+.cabecalho nav ul li a:hover {
+    transform: scale(1.1);
+}
+
 #sobreLoja {
     max-width: 1280px;
     width: 100%;
