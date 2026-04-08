@@ -66,11 +66,37 @@ function filtrarProdutos(categoria) {
         produtosFiltrados = listaProdutos.filter(produto => produto.categoria === categoria);
     }
     exibirProdutos(produtosFiltrados);
+    atualizarEstiloBotao(categoria); // Atualiza o estilo do botão após a filtragem
+}
+
+// Função para destacar o botão ativo
+function atualizarEstiloBotao(categoriaAtiva) {
+    const mapeamentoBotoes = [
+        { id: 'filtrarTodos', cat: 'Todos' },
+        { id: 'filtrarPlayStation', cat: 'PlayStation' },
+        { id: 'filtrarXbox', cat: 'Xbox' }
+    ];
+
+    mapeamentoBotoes.forEach(item => {
+        const btn = document.getElementById(item.id);
+        if (!btn) return; // Garante que o botão existe
+
+        if (item.cat === categoriaAtiva) {
+            // Estilo Ativo: Cor fixa escura e sem hover
+            btn.classList.add('bg-[#09236b]');
+            btn.classList.remove('bg-[#4775f5]', 'hover:bg-[#534ef5]');
+        } else {
+            // Estilo Inativo: Cor padrão com hover
+            btn.classList.remove('bg-[#09236b]');
+            btn.classList.add('bg-[#4775f5]', 'hover:bg-[#534ef5]');
+        }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     exibirProdutos(listaProdutos);
-
+    atualizarEstiloBotao('Todos'); // Define o botão "Todos" como ativo ao carregar a página
+    
     const botaoTodos = document.getElementById('filtrarTodos');
     const botaoPlayStation = document.getElementById('filtrarPlayStation');
     const botaoXbox = document.getElementById('filtrarXbox');
