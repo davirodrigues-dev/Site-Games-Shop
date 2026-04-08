@@ -1,50 +1,83 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="scroll-smooth scroll-pt-[130px]">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+        .animate-fadein { animation: fadein 0.5s ease-out; }
+        body { font-family: 'Roboto', sans-serif; }
+        h1, h2, h3, header { font-family: 'Bungee', cursive; }
+    </style>
     <title>Produtos - Game Shop</title>
 </head>
-<body>
-    <header>
-        <div class="cabecalho">
-            <h1>Games Shop</h1>
+<body class="bg-white overflow-x-hidden pt-[200px] md:pt-[100px]">
+    <header class="fixed top-0 left-0 w-full z-10">
+        <div class="bg-[#182C61] text-[#ecf0ec] p-8 md:p-[35px] mb-8 shadow-[0_4px_8px_rgba(0,0,0,0.324)] animate-fadein flex flex-col md:flex-row items-center justify-between text-center">
+            <h1 class="text-3xl md:text-4xl">Games Shop</h1>
             <nav>
-                <ul>
-                    <li><a href="index.html">Voltar ao Início</a></li>
+                <ul class="inline">
+                    <li class="inline-block mx-4 text-xl md:text-2xl"><a href="index.html" class="text-[#ecf0ec] no-underline hover:text-[#7791e1] hover:scale-110 transition-all inline-block">Voltar ao Início</a></li>
+                    <li class="inline-block mx-4 text-xl md:text-2xl"><a href="#produtos" class="text-[#ecf0ec] no-underline hover:text-[#7791e1] hover:scale-110 transition-all inline-block">Produtos</a></li>
+                    <li class="inline-block mx-4 text-xl md:text-2xl"><a href="#contato" class="text-[#ecf0ec] no-underline hover:text-[#7791e1] hover:scale-110 transition-all inline-block">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section>
-        <div class="container">
-            <h2>Catálogo de Jogos</h2>
-            <div class="produtos">
-                <div class="produtosDarkSouls">
-                    <img src="./imagem/darksouls.png" alt="imagem Dark Souls">
-                    <h3>DARK SOULS</h3>
-                    <p>R$ 25,00</p>
-                    <a class="btnComprar" href="https://wa.me/+5585999999999"><i class="fas fa-shopping-cart"> Comprar</i></a>
-                </div>
-                <div class="produtosGodOfWar">
-                    <img src="./imagem/godofwar.png" alt="imagem God Of War">
-                    <h3>God Of War</h3>
-                    <p>R$ 20,00</p>
-                    <a class="btnComprar" href="https://wa.me/+5585999999999"><i class="fas fa-shopping-cart"> Comprar</i></a>
-                </div>
-                <div class="produtosSpiderMan">
-                    <img src="./imagem/spiderman.png" alt="imagem Spiderman">
-                    <h3>Spider-man</h3>
-                    <p>R$ 23,99</p>
-                    <a class="btnComprar" href="https://wa.me/+5585999999999"><i class="fas fa-shopping-cart"> Comprar</i></a>
-                </div>
+
+    <section id="produtos" class="p-4">
+        <div class="max-w-[1280px] mx-auto">
+            <h2 class="ml-5 mt-2 text-3xl">Catálogo de Jogos</h2>
+            <div class="flex flex-wrap gap-4 ml-5 mt-2 mb-4">
+                <button id="filtrarTodos" class="bg-[#4775f5] text-white p-2 rounded hover:bg-[#534ef5] transition-colors">Todos</button>
+                <button id="filtrarPlayStation" class="bg-[#4775f5] text-white p-2 rounded hover:bg-[#534ef5] transition-colors">PlayStation</button>
+                <button id="filtrarXbox" class="bg-[#4775f5] text-white p-2 rounded hover:bg-[#534ef5] transition-colors">Xbox</button>
+            </div>
+            <div id="catalogoProdutos" class="flex flex-wrap justify-around md:justify-evenly mt-[23px] mb-8 gap-6">
+                <!-- Os produtos serão renderizados aqui pelo JavaScript -->
             </div>
         </div>
     </section>
+    <footer class="bg-[#182C61] text-[#ecf0ec] mt-[200px] pb-8">
+        <section class="max-w-[1280px] w-full mx-auto flex flex-col md:flex-row justify-between items-start p-4 pt-16 gap-12">
+            <div class="w-full md:w-1/2">
+                <h2 class="text-2xl mb-4" id="contato">Contato</h2>
+                <div class="mt-8">
+                    <h3 class="text-xl italic">Entre em contato conosco</h3>
+                    <form class="flex flex-col mt-8">
+                        <label for="name" class="mb-2">Nome:</label>
+                        <input type="text" id="name" name="name" class="p-2 mb-4 border border-gray-300 rounded text-black" required>
+                        
+                        <label for="email" class="mb-2">Email:</label>
+                        <input type="email" id="email" name="email" class="p-2 mb-4 border border-gray-300 rounded text-black" required>
+                        
+                        <label for="message" class="mb-2">Mensagem:</label>
+                        <textarea id="message" name="message" rows="4" class="p-2 mb-4 border border-gray-300 rounded text-black" required></textarea>
+                        
+                        <button type="submit" class="p-[10px] bg-[#4775f5] text-[#ecf0ec] rounded cursor-pointer hover:bg-[#534ef5] transition-colors">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="w-full md:w-1/4">
+                <h3 class="text-xl italic mb-4">Nos siga nas redes sociais</h3>
+                <a href="#" class="block mb-2 mt-4 text-[#537df0] text-lg hover:text-[#534ef5] transition-colors"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#" class="block mb-2 mt-4 text-[#537df0] text-lg hover:text-[#534ef5] transition-colors"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#" class="block mb-2 mt-4 text-[#537df0] text-lg hover:text-[#534ef5] transition-colors"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+            <div class="w-full md:w-1/4">
+                <h3 class="text-xl italic mb-4">Informações de contato</h3>
+                <p href="mailto:contato@gameshop.com" class="text-[#537df0] block mb-2 mt-4 text-lg cursor-default"><i class="fas fa-envelope"></i> contato@gameshop.com</p>
+                <p class="block mb-2 mt-4 text-[#537df0] text-lg cursor-default transition-colors"><i class="fas fa-phone"></i> (11) 1234-5678</p>
+                <p class="block mb-2 mt-4 text-[#537df0] text-lg cursor-default transition-colors"><i class="fas fa-map-marker-alt"></i> Rua dos Games, 123 - São Paulo, SP</p>
+            </div>
+        </section>
+        <p class="flex justify-center mt-5 text-sm">&copy; 2026 Game Shop. Todos os direitos reservados.</p>
+    </footer>
+    <script src="./script.js"></script>
 </body>
 </html>
