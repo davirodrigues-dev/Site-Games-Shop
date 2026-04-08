@@ -29,8 +29,7 @@ O plano é continuar evoluindo o projeto para transformá-lo em uma aplicação 
 
 - [x] Implementação da galeria de produtos com cards interativos.
 - [ ] Adição de um carrinho de compras funcional com JavaScript.
-- [ ] Criação de uma seção de blog/notícias sobre o mundo dos games.
-- [ ] Implementação de filtros de busca para os produtos (por plataforma, gênero, etc.).
+- [x] Implementação de filtros de busca para os produtos.
 
 ## 🚀 Tecnologias Utilizadas
 
